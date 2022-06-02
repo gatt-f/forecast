@@ -104,5 +104,6 @@ async function loadWeather(url) {
     <li>Windgeschwindigkeit: ${details.wind_speed * 3.6} (km/h)</li>
     </ul>
     `;
+    marker.setPopupContent(popup).openPopup();
 };
 loadWeather("https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=47.267222&lon=11.392778");
