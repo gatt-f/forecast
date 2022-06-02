@@ -34,7 +34,7 @@ async function loadWind(url) {
     const jsondata = await response.json();
     console.log("Jsondaten", jsondata);
     console.log("Zeitpunkt Erstellung", jsondata[0].header.refTime);
-    console.log("Zeitpunkt Gültigkeit", jsondata[0].header.forecastTime);
+    console.log("Zeitpunkt Vorhersage (+Stunden)", jsondata[0].header.forecastTime);
 
     let forecastDate = new Date(jsondata[0].header.refTime);
     console.log("Echtes Datum Erstellung", forecastDate);
